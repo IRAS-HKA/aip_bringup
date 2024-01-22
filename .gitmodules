@@ -1,16 +1,16 @@
 [submodule "dependencies/iras_interfaces"]
 	path = dependencies/iras_interfaces
-	url = https://github.com/IRAS-HKA/iras_interfaces.git
+	url = git@github.com:IRAS-HKA/iras_interfaces.git
 	branch = aip
 [submodule "dependencies/aip_cell_description"]
 	path = dependencies/aip_cell_description
-	url = https://github.com/IRAS-HKA/aip_cell_description.git
+	url = git@github.com:IRAS-HKA/aip_cell_description.git
 	branch = main
 [submodule "dependencies/kuka_eki"]
 	path = dependencies/kuka_eki
-	url = https://github.com/IRAS-HKA/kuka_eki.git
+	url = git@github.com:IRAS-HKA/kuka_eki.git
 	branch = driver-humble
 [submodule "dependencies/moveit_wrapper"]
 	path = dependencies/moveit_wrapper
-	url = https://github.com/IRAS-HKA/moveit_wrapper.git
+	url = git@github.com:IRAS-HKA/moveit_wrapper.git
 	branch = humble
