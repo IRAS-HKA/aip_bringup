@@ -1,7 +1,7 @@
 [submodule "dependencies/iras_interfaces"]
 	path = dependencies/iras_interfaces
 	url = https://github.com/IRAS-HKA/iras_interfaces.git
-	branch = humble
+	branch = aip
 [submodule "dependencies/aip_cell_description"]
 	path = dependencies/aip_cell_description
 	url = https://github.com/IRAS-HKA/aip_cell_description.git
