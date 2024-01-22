@@ -59,36 +59,36 @@ RUN DEBIAN_FRONTEND=noninteractive apt update && apt install -y \
     ros-$ROS_DISTRO-cv-bridge
 
 USER $USER
-RUN pip install scipy
+RUN pip install numpy scipy
 
+##############################################################################
+##                                 User Dependecies                         ##
+##############################################################################
 RUN mkdir -p /home/"$USER"/dependencies_ws/src
 
+# Following are clones as submodules (originally with git clone from iras Gitlab)
+# RUN git clone -b driver-humble https://github.com/IRAS-HKA/kuka_eki.git
 COPY ./dependencies/moveit_wrapper  /home/"$USER"/dependencies_ws/src/moveit_wrapper
 COPY ./dependencies/iras_interfaces /home/"$USER"/dependencies_ws/src/iras_interfaces
-COPY ./dependencies/ros_environment /home/"$USER"/dependencies_ws/src/ros_environment
-
 COPY ./dependencies/kuka-eki  /home/"$USER"/dependencies_ws/src/kuka-eki
-# RUN git clone -b driver-humble https://github.com/IRAS-HKA/kuka_eki.git
-
-COPY ./dependencies/ready2_educate /home/"$USER"/dependencies_ws/src/ready2_educate
-
-
 COPY ./dependencies/aip_cell_description /home/"$USER"/dependencies_ws/src/aip_cell_description
-COPY ./dependencies/manipulation_tasks /home/"$USER"/dependencies_ws/src/manipulation_tasks
-RUN cd /home/"$USER"/dependencies_ws/manipulation_tasks/manipulation_tasks    && pip install numpy scipy
 
+# Not necessary for aip
+# COPY ./dependencies/ready2_educate /home/"$USER"/dependencies_ws/src/ready2_educate
+
+# Still necessary? (no submodule, only local files in repo)
+COPY ./dependencies/ros_environment /home/"$USER"/dependencies_ws/src/ros_environment
+COPY ./dependencies/manipulation_tasks /home/"$USER"/dependencies_ws/src/manipulation_tasks
+# RUN cd /home/"$USER"/dependencies_ws/manipulation_tasks/manipulation_tasks    && pip install numpy scipy
 
 
 RUN . /opt/ros/$ROS_DISTRO/setup.sh && cd /home/"$USER"/dependencies_ws && colcon build
 RUN echo "source /home/$USER/dependencies_ws/install/setup.bash" >> /home/"$USER"/.bashrc
 
-RUN mkdir -p /home/"$USER"/dependencies
-COPY ./dependencies/manipulation_tasks /home/"$USER"/dependencies/manipulation_tasks
-RUN cd /home/"$USER"/dependencies/manipulation_tasks/manipulation_tasks    && pip install numpy scipy
-pip install manipulation_tasks
-##############################################################################
-##                                 User Dependecies                         ##
-##############################################################################
+# RUN mkdir -p /home/"$USER"/dependencies
+# COPY ./dependencies/manipulation_tasks /home/"$USER"/dependencies/manipulation_tasks
+# RUN cd /home/"$USER"/dependencies/manipulation_tasks/manipulation_tasks    && pip install numpy scipy
+# pip install manipulation_tasks
 
 
 ##############################################################################
