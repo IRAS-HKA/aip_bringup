@@ -1,0 +1,117 @@
+running egg_info
+creating build/manipulation_tasks/manipulation_tasks.egg-info
+writing build/manipulation_tasks/manipulation_tasks.egg-info/PKG-INFO
+writing dependency_links to build/manipulation_tasks/manipulation_tasks.egg-info/dependency_links.txt
+writing requirements to build/manipulation_tasks/manipulation_tasks.egg-info/requires.txt
+writing top-level names to build/manipulation_tasks/manipulation_tasks.egg-info/top_level.txt
+writing manifest file 'build/manipulation_tasks/manipulation_tasks.egg-info/SOURCES.txt'
+reading manifest file 'build/manipulation_tasks/manipulation_tasks.egg-info/SOURCES.txt'
+writing manifest file 'build/manipulation_tasks/manipulation_tasks.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build
+creating /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib
+creating /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks
+copying manipulation_tasks/loader.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks
+copying manipulation_tasks/scene.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks
+copying manipulation_tasks/task.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks
+copying manipulation_tasks/oracle.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks
+copying manipulation_tasks/object.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks
+copying manipulation_tasks/sensor.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks
+copying manipulation_tasks/transform.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks
+copying manipulation_tasks/factory.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks
+copying manipulation_tasks/primitive.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks
+copying manipulation_tasks/__init__.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks
+copying manipulation_tasks/dataclasses.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks
+copying manipulation_tasks/geometric_utils.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks
+creating /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins
+copying manipulation_tasks/plugins/__init__.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins
+creating /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/transform_utils
+copying manipulation_tasks/transform_utils/differences.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/transform_utils
+copying manipulation_tasks/transform_utils/random.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/transform_utils
+copying manipulation_tasks/transform_utils/__init__.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/transform_utils
+creating /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/oracles
+copying manipulation_tasks/plugins/oracles/suction_grasp.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/oracles
+copying manipulation_tasks/plugins/oracles/__init__.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/oracles
+copying manipulation_tasks/plugins/oracles/insertion.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/oracles
+creating /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/objects
+copying manipulation_tasks/plugins/objects/base.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/objects
+copying manipulation_tasks/plugins/objects/__init__.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/objects
+creating /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/tasks
+copying manipulation_tasks/plugins/tasks/kitting_task.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/tasks
+copying manipulation_tasks/plugins/tasks/grasp_task.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/tasks
+copying manipulation_tasks/plugins/tasks/simple_task.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/tasks
+copying manipulation_tasks/plugins/tasks/__init__.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/tasks
+copying manipulation_tasks/plugins/tasks/box_packing_task.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/tasks
+creating /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/primitives
+copying manipulation_tasks/plugins/primitives/pick_and_place.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/primitives
+copying manipulation_tasks/plugins/primitives/__init__.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/primitives
+running install
+running install_lib
+creating /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/loader.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/scene.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks
+creating /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins
+creating /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/oracles
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/oracles/suction_grasp.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/oracles
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/oracles/__init__.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/oracles
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/oracles/insertion.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/oracles
+creating /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/objects
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/objects/base.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/objects
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/objects/__init__.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/objects
+creating /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/tasks
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/tasks/kitting_task.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/tasks
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/tasks/grasp_task.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/tasks
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/tasks/simple_task.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/tasks
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/tasks/__init__.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/tasks
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/tasks/box_packing_task.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/tasks
+creating /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/primitives
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/primitives/pick_and_place.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/primitives
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/primitives/__init__.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/primitives
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/plugins/__init__.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins
+creating /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/transform_utils
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/transform_utils/differences.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/transform_utils
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/transform_utils/random.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/transform_utils
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/transform_utils/__init__.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/transform_utils
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/task.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/oracle.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/object.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/sensor.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/transform.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/factory.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/primitive.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/__init__.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/dataclasses.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks
+copying /home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/build/lib/manipulation_tasks/geometric_utils.py -> /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/loader.py to loader.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/scene.py to scene.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/oracles/suction_grasp.py to suction_grasp.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/oracles/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/oracles/insertion.py to insertion.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/objects/base.py to base.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/objects/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/tasks/kitting_task.py to kitting_task.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/tasks/grasp_task.py to grasp_task.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/tasks/simple_task.py to simple_task.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/tasks/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/tasks/box_packing_task.py to box_packing_task.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/primitives/pick_and_place.py to pick_and_place.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/primitives/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/plugins/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/transform_utils/differences.py to differences.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/transform_utils/random.py to random.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/transform_utils/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/task.py to task.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/oracle.py to oracle.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/object.py to object.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/sensor.py to sensor.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/transform.py to transform.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/factory.py to factory.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/primitive.py to primitive.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/dataclasses.py to dataclasses.cpython-310.pyc
+byte-compiling /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks/geometric_utils.py to geometric_utils.cpython-310.pyc
+running install_egg_info
+Copying build/manipulation_tasks/manipulation_tasks.egg-info to /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks-0.1.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/install.log'

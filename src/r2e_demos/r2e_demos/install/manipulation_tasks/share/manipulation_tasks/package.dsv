@@ -1,0 +1,3 @@
+source;share/manipulation_tasks/hook/pythonpath.ps1
+source;share/manipulation_tasks/hook/pythonpath.dsv
+source;share/manipulation_tasks/hook/pythonpath.sh

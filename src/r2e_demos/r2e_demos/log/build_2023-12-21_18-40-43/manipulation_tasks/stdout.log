@@ -1,0 +1,16 @@
+running egg_info
+writing build/manipulation_tasks/manipulation_tasks.egg-info/PKG-INFO
+writing dependency_links to build/manipulation_tasks/manipulation_tasks.egg-info/dependency_links.txt
+writing requirements to build/manipulation_tasks/manipulation_tasks.egg-info/requires.txt
+writing top-level names to build/manipulation_tasks/manipulation_tasks.egg-info/top_level.txt
+reading manifest file 'build/manipulation_tasks/manipulation_tasks.egg-info/SOURCES.txt'
+writing manifest file 'build/manipulation_tasks/manipulation_tasks.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_egg_info
+removing '/home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks-0.1.0-py3.10.egg-info' (and everything under it)
+Copying build/manipulation_tasks/manipulation_tasks.egg-info to /home/robot/ros_ws/src/r2e_demos/r2e_demos/install/manipulation_tasks/lib/python3.10/site-packages/manipulation_tasks-0.1.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/robot/ros_ws/src/r2e_demos/r2e_demos/build/manipulation_tasks/install.log'
