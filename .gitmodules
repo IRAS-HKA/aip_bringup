@@ -13,4 +13,4 @@
 [submodule "dependencies/moveit_wrapper"]
 	path = dependencies/moveit_wrapper
 	url = git@github.com:IRAS-HKA/moveit_wrapper.git
-	branch = humble
+	branch = r2e
