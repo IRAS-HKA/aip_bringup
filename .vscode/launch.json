@@ -52,7 +52,7 @@
             "id": "package",
             "type": "promptString",
             "description": "Package name",
-            "default": "kuka_kr10r1100sixx_cell_description"
+            "default": "aip_cell_description"
         },
         {
             "id": "program",
