@@ -52,13 +52,13 @@
             "id": "package",
             "type": "promptString",
             "description": "Package name",
-            "default": "aip_cell_description"
+            "default": "aip_bosch_gripper"
         },
         {
             "id": "program",
             "type": "promptString",
             "description": "Program name",
-            "default": "Coordinator"
+            "default": "aip_bosch_gripper_node"
         },
         {
             "id": "ros_launch",
