@@ -1,186 +1,47 @@
 # AIP Bringup Tutorial
 
-## First Time Setup - Robot
+## Prequisites
 
-1. Boot up the robot
-2. Boot up the Windows PC and log in with your RZ account
-3. Download KRL sources
-   from [this Link](https://www.w.hs-karlsruhe.de/gitlab/iras/research-projects/ki5grob/kuka-eki/-/tree/driver/krl) (with your RZ account).  **Note:** if you do not have access to the repo, you can find the same files [here](https://github.com/gergely-soti/kuka_experimental/tree/foxy/kuka_eki/krl) for download.
-   ![Download KRL](readme_imgs/krl_download.png)
-4. Unpack   downloaded sources
-5. Change IP in `src/kuka_eki/krl/EkiHwInterface.xml` and `src/kuka_eki/krl/EkiIOInterface.xml` to match the robot
-   controller's IP <font size="1"> (should be found on the robot cell somewhere) </font>
-6. Create new project on KUKA smartPAD (teach pendant) with KUKA smartHMI (touch screen user interface)
-    - Open main menu <font size="1"> (key with small robot in the bottom right on smartPAD or top left in
-      smartHMI) </font> &rarr; _Öffnen_
-    - _Konfiguration_ &rarr; _Benutzergruppe_ &rarr; _Administrator_ (pass: kuka)
-    - Open project management window <font size="1"> (blue WorkVisual icon (gear with robot in it) on smartHMI) </font>
-        - "Ready2Educate" is the active project:
-            - _Aktuellen Zustand sichern_
-            - Name: "ros2_driver" &rarr; _OK_
-            - select "ros2_driver" in _Verfügbare Projekte_ &rarr; _Entpinnen_
-            - _Aktivieren_
-        - "Ready2Educate" is not the active project:
-            - Pin "Ready2Educate"
-            - _Aktivieren_ &rarr; type in new project name, e.g. "ros2_driver" &rarr; confirm with _OK_
-    - Confirm _Wollen Sie die Aktivierung des Projektes "ros2_driver" zulassen?_ with _Ja_
-    - Confirm _Projektverwaltung_ panel _Wollen Sie fortfahren?_ with _Ja_
-    - Wait until project is activated
-7. Insert downloaded KRL sources in new project
-    - On Windows PC open WorkVisual
-    - Load newly created project "ros2_driver" from robot cell
-        - _Datei_ &rarr; _Projekt öffnen_ &rarr; _Suchen_
-        - Select cell with the corresponding IP
-        - Select project "ros2_driver"
-        - _Öffnen_
-    - Navigate to "Dateien" tab in the left panel
-    - Copy in step 5 modified `src/kuka_eki/krl/EkiHWInterface.xml` and `src/kuka_eki/krl/EkiIOInterface.xml`
-      to `<KRC>/Config/User/Common/EthernetKRL`  
-      ![EKI Interface XMLs](readme_imgs/xmls.png)
-    - Create new folder `<KRC>/R1/Program/ros2_driver`
-    - Copy extracted `src/krl/kuka_eki_hw_interface.dat` and `src/krl/kuka_eki_hw_interface.src`
-      to `<KRC>/R1/Program/ros2_driver`  
-      ![KRL Program Files](readme_imgs/krl_files.png)
-8. Install program
-    - Switch to user group _Administrator_ on smartPAD <font size="1"> (see step 6) </font>
-    - Click _Installieren_ button  
-      ![Install Button](readme_imgs/install_button.png)
-    - _Weiter_ &rarr; _Weiter_ &rarr; _Weiter_ &rarr; _Ja_ on smartPAD &rarr;
-      _Ja_ on smartPAD &rarr; _Fertigstellen_
+For a detailed information to the Bring Up of the AIP application, please check out the AIP_Wiki, especially "[How to start AIP](https://github.com/IRAS-HKA/aip_wiki/blob/main/docs/how_to_start_aip.md)".
 
-## Start Hardware Interface on Robot
+## Quick Start Instruction for AIP KUKA KR10 Robot
 
-1. Switch to user group _Administrator_ on smartHMI
-2. Activate project "ros2_driver" on smartHMI (if not already active)
-    - Open project management window <font size="1"> (blue WorkVisual icon (gear with robot in it) on smartHMI) </font>
-    - Select "ros2_driver" in _Verfügbare Projekte_ &rarr; _Entpinnen_
-    - _Aktivieren_ &rarr; -> _Ja_
-    - Wait until project is activated
-3. On smartHMI navigate to  `R1/Program/ros2_driver`
-4. Select `kuka_eki_hw_interface.src` &rarr; _Anwählen_
-5. Select operating mode, e.g. Aut
-    - Turn the switch on the smartPAD clockwise <font size="1"> (keyswitch left to emergency stop button) </font>
-    - Select the operating mode on the smartHMI
-    - Turn the switch back to the original position
-6. Start program
-    - Potentially change the robot's velocity <font size="1"> (start symbol on top of hand symbol in the status bar at
-      the
-      top of the smartHMI) </font> with the slider in the smartHMI or the +/- keys on the smartPAD
-      <font size="1"> (penultimate buttons on the right side) </font>
-    - Press start key (green play button) on the left side of the smartPAD multiple times, until the robot interpreter
-      status indicator turns green
-      <font size="1"> (the area around the "R" in the status bar at the top of the smartHMI) </font>
-        - You potentially need to "Quitt" the robot by pressing the "Quitt" button on the robot cell
-        - You need to activate the robot's drives if they are not active (grey "O" next to the "R" in the status bar at
-          the top of the smartHMI)
-            - click on the "O" in the status bar
-            - click in "I" in the menu that pops up
-    - If T1 or T2 operating mode is selected instead of Aut, one of the enabling switches on the rear of the smartPAD
-      has
-      to be held in center position and the start key has to be held constantly to continue running
-      the program
+1. Establish communication 
+   - KUKA HMI (SmartPad) must be set in AUT-Mode for operation 
+   - EKI_HW_Interface file must be selected and running as active project 
+   - Please pay attention to the specified velocities!
+ 
+2. Start RVIZ
+   - Pay attention to the hardware flag
+    - **True** = Actions will only be performed in RViz simulation 
+    - **False** = Actions will be performed on the physical KR10. 
+        ``` bash
+        # in aip_bringup docker 
+        ros2 launch aip_cell_description aip.launch.py use_fake_hardware:=false robot_ip:=10.166.32.145
+        ``` 
 
-## Setup ROS2 environment
+3. Start the Bosch Gripper node to enable gripper movements 
+    ``` bash
+    # in aip_bringup docker 
+    ros2 run aip_bosch_gripper aip_bosch_gripper_node 
+    ``` 
 
-1. Clone and build repository "AIP Bringup"
-    - Open a terminal (Ctrl + Alt + T) and navigate to projects folder
-      ```
-      mkdir -p ~/projects && cd ~/projects
-      ```
-    - Clone repo (if not already cloned); log in with your RZ account
-      ```
-      git clone -b dev https://www.w.hs-karlsruhe.de/gitlab/iras/common/instructions/iras_robots/aip_bringup.git
-      ```
-    - Navigate to cloned repo
-      ``` 
-      cd aip_bringup
-      ```
-    - Build container
-      ```
-      ./start_docker.sh
-      ```
-      If everything went well, you should be in the container like this: `robot@IRAS-IRL0-LIN:~/ros_ws$`
-    - Set ROS_DOMAIN_ID. If there are multiple robots in use, make sure, that the set ROS_DOMAIN_ID is different on each PC
-      ```
-      export ROS_DOMAIN_ID=<id>
-      ```
-      You can check your currently set ROS_DOMAIN_ID by running
-      ```
-      echo $ROS_DOMAIN_ID
-      ```
+4. Execute the gripper via service calls from the command line
+   ``` bash
+   # Service call for ROS node OpenGripper cylinder 1 and 2 
+   ros2 service call /open_gripper iras_interfaces/srv/MoveGripper '{cylinder_ids: [1,2]}'
+   ```
+    ``` bash
+    # Service call for ROS node CloseGripper cylinder 1 and 2 
+    ros2 service call /close_gripper iras_interfaces/srv/MoveGripper '{cylinder_ids: [1,2]}'
+    ```
 
-    - In the container, build workspace:
-      ```
-      colcon build
-      ```
-    - Source workspace
-      ```
-      source install/setup.bash
-      ```
-2. Start robot driver
-    - If not already in container, attach to running container. Open up a new terminal and run
-      ```
-      docker exec -it r2e_cell /bin/bash
-      ```
-    - If you have opened a new terminal you need to set your ROS_DOMAIN_ID again, use the same ID as before
-      ```
-      export ROS_DOMAIN_ID=<id>
-      ```
-      You can check your currently set ROS_DOMAIN_ID by running
-      ```
-      echo $ROS_DOMAIN_ID
-      ```
-    - Source workspace
-      ```
-      source install/setup.bash
-      ```
-    - Launch robot driver with MoveIt2 wrapper
-      ```
-      ros2 launch kuka_kr3_cell_description cell.launch.py
-      ```
-      This will open up a simulated hardware with visualisation.  
-      To launch the real robot:
-        - Make sure that you are in our local network (Wi-Fi or LAN)
-        - Test your application in simulation first
-        - Make sure that the robot is not in a collision state when the application is executed on the real robot
-        - If everything is fine, execute
-          ```
-          ros2 launch kuka_kr3_cell_description cell.launch.py use_fake_hardware:=false robot_ip:=<robot-ip>
-          ```
-3. Check out tutorial code
-    - Open up VSCode (Windows key &rarr; type "code" &rarr; Enter)
-    - Open folder "aip_bringup" in VSCode
-    - Open file `src/r2e_demos/r2e_demos/test_ros_env.py`
-    - Read and understand the code
-    - You might notice the `is_simulation` flag while creating the RobotClient object. Currently, this only controls whether
-      the real gripper is connected or not. Whether the movement of the robot is simulated or not, solely depends on 
-      the `use_fake_hardware` parameter at launch. If you want to test your application on the real robot, and also want to move the 
-      gripper, you need to set the `is_simulation` flag to false.
-4. Move robot
-    - Open up a new terminal and attach to running container
-      ```
-      docker exec -it r2e_cell /bin/bash
-      ```
-    - If you have opened a new terminal you need to set your ROS_DOMAIN_ID again, use the same ID as before
-      ```
-      export ROS_DOMAIN_ID=<id>
-      ```
-      You can check your currently set ROS_DOMAIN_ID by running
-      ```
-      echo $ROS_DOMAIN_ID
-      ```
-    - Source workspace
-      ```
-      source install/setup.bash
-      ```
-    - Run sample application
-      - before running the application, check the robot's movement in the simulated environment and make sure, that the
-        robot is not in a collision state when the application is executed on the real robot 
-      ```
-      ros2 run r2e_demos test_ros_env
-      ```
+5. Start Behaviour Tree
+    ``` bash
+    # in aip_coordinator docker
+    ros2 launch aip_coordinator aip.launch.py
 
-## Make your own ROS2 application
+    # the to be executed behavior tree can be adjusted in the params.yaml file located in src/aip_coordinator/config/params.yaml
+    ```
 
-Note, that this repository is a template repository. You can use it as a starting point for your own ROS2 applications
-but please do not push your changes to this repository.
+
