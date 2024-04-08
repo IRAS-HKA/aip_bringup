@@ -2,12 +2,12 @@
 uid=$(eval "id -u")
 gid=$(eval "id -g")
 
-echo "Run Container"
 docker run \
     --name aip_bringup \
     --privileged \
     -it \
     -e DISPLAY=$DISPLAY \
+    --env-file .env \
     -v $PWD/src:/home/robot/ros_ws/src:rw \
     -v $PWD/.vscode:/home/robot/dependencies_ws/src/.vscode \
     -v $PWD/dependencies:/home/robot/dependencies_ws/src \

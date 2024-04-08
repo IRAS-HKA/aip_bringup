@@ -24,7 +24,6 @@ ARG USER=robot
 ARG PASSWORD=robot
 ARG UID=1000
 ARG GID=1000
-ARG DOMAIN_ID=0
 ENV UID=${UID}
 ENV GID=${GID}
 ENV USER=${USER}
@@ -36,7 +35,6 @@ RUN groupadd -g "$GID" "$USER"  && \
 RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> /etc/bash.bashrc
 RUN echo "source /usr/share/colcon_cd/function/colcon_cd.sh" >> /etc/bash.bashrc
 RUN echo "export _colcon_cd_root=~/ros2_install" >> /etc/bash.bashrc
-RUN echo "export ROS_DOMAIN_ID=${DOMAIN_ID}" >> /etc/bash.bashrc
 
 USER $USER 
 RUN rosdep update
