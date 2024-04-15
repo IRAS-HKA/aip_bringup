@@ -44,4 +44,9 @@ For a detailed information to the Bring Up of the AIP application, please check 
     # the to be executed behavior tree can be adjusted in the params.yaml file located in src/aip_coordinator/config/params.yaml
     ```
 
+## Testing
 
+Move robot to pose
+``` bash
+ros2 service call /move_to_pose iras_interfaces/srv/MoveToPose '{pose: {position: {x: 0.69, y: 0.66, z: 0.27}}, cart: True}'
+```
