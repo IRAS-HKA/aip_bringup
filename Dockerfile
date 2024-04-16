@@ -37,7 +37,7 @@ RUN echo "source /usr/share/colcon_cd/function/colcon_cd.sh" >> /etc/bash.bashrc
 RUN echo "export _colcon_cd_root=~/ros2_install" >> /etc/bash.bashrc
 
 # Set ROS2 DDS profile
-COPY ./dds_profile.xml /home/$USER
+COPY ./src/aip_bringup/config/dds_profile.xml /home/$USER
 RUN chown $USER:$USER /home/$USER/dds_profile.xml
 ENV FASTRTPS_DEFAULT_PROFILES_FILE=/home/$USER/dds_profile.xml
 
