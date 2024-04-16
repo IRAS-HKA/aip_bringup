@@ -117,15 +117,15 @@ def generate_launch_description():
         }.items(),
     )
 
-    # gripper_launch = IncludeLaunchDescription(
-    #     PythonLaunchDescriptionSource(
-    #         PathJoinSubstitution([FindPackageShare('zimmer_gp406n'), 'launch', 'zimmer_gp406_node.launch.py'])),
-    #     launch_arguments={
-    #         "robot_ip": robot_ip,
-    #         "eki_io_port": eki_io_port,
-    #         "n_io": n_io,
-    #     }.items(),
-    # )
+    gripper_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            PathJoinSubstitution([FindPackageShare('aip_bosch_gripper'), 'launch', 'aip_bosch_gripper_node.launch.py'])),
+        launch_arguments={
+            "robot_ip": robot_ip,
+            "eki_io_port": eki_io_port,
+            "n_io": n_io,
+        }.items(),
+    )
 
     moveit_wrapper_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -156,4 +156,4 @@ def generate_launch_description():
         output="screen",
     )
 
-    return LaunchDescription(declared_arguments + [moveit_launch, moveit_wrapper_launch, servo_node])
+    return LaunchDescription(declared_arguments + [moveit_launch, moveit_wrapper_launch, servo_node, gripper_launch])

@@ -95,13 +95,14 @@ RUN echo "source /home/$USER/dependencies_ws/install/setup.bash" >> /home/"$USER
 # RUN cd /home/"$USER"/dependencies/manipulation_tasks/manipulation_tasks    && pip install numpy scipy
 # pip install manipulation_tasks
 
+RUN mkdir -p /home/"$USER"/ros_ws/src
+COPY ./src/aip_bringup /home/"$USER"/ros_ws/src/aip_bringup
 
 ##############################################################################
 ##                                 Build ROS and run                        ##
 ##############################################################################
 USER $USER 
-RUN mkdir -p /home/"$USER"/ros_ws/src
-RUN cd /home/"$USER"/ros_ws && colcon build
+RUN . /opt/ros/$ROS_DISTRO/setup.sh && cd /home/"$USER"/ros_ws && colcon build
 RUN echo "source /home/$USER/ros_ws/install/setup.bash" >> /home/$USER/.bashrc
 RUN mkdir -p /home/"$USER"/ros_ws/install/r2e_demos
 
