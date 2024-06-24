@@ -5,8 +5,8 @@ import numpy as np
 import rclpy
 from rclpy.node import Node
 from rclpy.task import Future
-from iras_interfaces.srv import MoveToPose as PoseSrv
-from iras_interfaces.srv import MoveToJointPosition as JointPositionSrv
+from aip_interfaces.srv import MoveToPose as PoseSrv
+from aip_interfaces.srv import MoveToJointPosition as JointPositionSrv
 from geometry_msgs.msg import Pose as PoseMsg
 from geometry_msgs.msg import Quaternion, Point
 from std_srvs.srv import Trigger

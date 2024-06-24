@@ -74,7 +74,7 @@ RUN mkdir -p /home/"$USER"/dependencies_ws/src
 # Following are clones as submodules (originally with git clone from iras Gitlab)
 # RUN git clone -b driver-humble https://github.com/IRAS-HKA/kuka_eki.git
 COPY ./dependencies/moveit_wrapper  /home/"$USER"/dependencies_ws/src/moveit_wrapper
-COPY ./dependencies/iras_interfaces /home/"$USER"/dependencies_ws/src/iras_interfaces
+COPY ./dependencies/aip_interfaces /home/"$USER"/dependencies_ws/src/aip_interfaces
 COPY ./dependencies/kuka_eki  /home/"$USER"/dependencies_ws/src/kuka_eki
 COPY ./dependencies/aip_cell_description /home/"$USER"/dependencies_ws/src/aip_cell_description
 
