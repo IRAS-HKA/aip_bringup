@@ -1,0 +1,4 @@
+moveit_msgs/AttachedCollisionObject detached_object_details
+moveit_msgs/AttachedCollisionObject attached_object_details
+---
+bool detach_success

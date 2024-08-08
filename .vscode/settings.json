@@ -108,4 +108,5 @@
         "forward_list": "cpp",
         "source_location": "cpp"
     },
+    "ros.distro": "humble",
 }
