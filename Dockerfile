@@ -80,10 +80,9 @@ COPY ./dependencies/aip_cell_description /home/"$USER"/dependencies_ws/src/aip_c
 COPY ./dependencies/trac_ik /home/"$USER"/dependencies_ws/src/trac_ik
 COPY ./dependencies/trac_ik_kinematics_plugin /home/"$USER"/dependencies_ws/src/trac_ik_kinematics_plugin
 COPY ./dependencies/trac_ik_lib /home/"$USER"/dependencies_ws/src/trac_ik_lib
-COPY ./dependencies/control_node /home/"$USER"/dependencies_ws/src/control_node
 
 # WORKDIR /home/$USER/dependencies_ws/src
-USER root 
+USER root
 RUN git clone https://github.com/henningkayser/stomp_moveit
 RUN vcs import < stomp_moveit/stomp_moveit.repos
 USER $USER
@@ -97,7 +96,6 @@ USER $USER
 COPY ./dependencies/ros_environment /home/"$USER"/dependencies_ws/src/ros_environment
 COPY ./dependencies/manipulation_tasks /home/"$USER"/dependencies_ws/src/manipulation_tasks
 # RUN cd /home/"$USER"/dependencies_ws/manipulation_tasks/manipulation_tasks    && pip install numpy scipy
-
 RUN . /opt/ros/$ROS_DISTRO/setup.sh && cd /home/"$USER"/dependencies_ws && rosdep install --from-paths src --ignore-src -r -y
 RUN . /opt/ros/$ROS_DISTRO/setup.sh && cd /home/"$USER"/dependencies_ws && colcon build
 RUN echo "source /home/$USER/dependencies_ws/install/setup.bash" >> /home/"$USER"/.bashrc
