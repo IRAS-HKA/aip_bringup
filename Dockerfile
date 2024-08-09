@@ -61,7 +61,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt update && apt install -y \
     ros-$ROS_DISTRO-controller-manager \
     ros-$ROS_DISTRO-sensor-msgs-py  \
     ros-$ROS_DISTRO-joy*  \
-    ros-$ROS_DISTRO-cv-bridge
+    ros-$ROS_DISTRO-cv-bridge \
+    ros-$ROS_DISTRO-forward-command-controller
 
 USER $USER
 RUN pip install numpy scipy
