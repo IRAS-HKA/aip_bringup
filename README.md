@@ -29,11 +29,11 @@ For a detailed information to the Bring Up of the AIP application, please check 
 4. Execute the gripper via service calls from the command line
    ``` bash
    # Service call for ROS node OpenGripper cylinder 1 and 2 
-   ros2 service call /open_gripper iras_interfaces/srv/MoveGripper '{cylinder_ids: [1,2]}'
+   ros2 service call /open_gripper aip_interfaces/srv/MoveGripper '{cylinder_ids: [1,2]}'
    ```
     ``` bash
     # Service call for ROS node CloseGripper cylinder 1 and 2 
-    ros2 service call /close_gripper iras_interfaces/srv/MoveGripper '{cylinder_ids: [1,2]}'
+    ros2 service call /close_gripper aip_interfaces/srv/MoveGripper '{cylinder_ids: [1,2]}'
     ```
 
 5. Start Behaviour Tree
@@ -48,5 +48,5 @@ For a detailed information to the Bring Up of the AIP application, please check 
 
 Move robot to pose
 ``` bash
-ros2 service call /move_to_pose iras_interfaces/srv/MoveToPose '{pose: {position: {x: 0.69, y: 0.66, z: 0.27}}, cart: True}'
+ros2 service call /move_to_pose aip_interfaces/srv/MoveToPose '{pose: {position: {x: 0.69, y: 0.66, z: 0.27}}, cart: True}'
 ```
