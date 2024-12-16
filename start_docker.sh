@@ -1,4 +1,8 @@
 #!/bin/sh
+
+# Define the command to run inside the Docker container, default is bash
+COMMAND=${1:-bash}
+
 uid=$(eval "id -u")
 gid=$(eval "id -g")
 
@@ -15,4 +19,5 @@ docker run \
     --net host \
     --rm \
     --ipc host \
-    iras/aip_bringup:humble
+    iras/aip_bringup:humble \
+    $COMMAND

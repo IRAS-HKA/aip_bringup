@@ -1,0 +1,1 @@
+./start_docker.sh "ros2 launch aip_bringup aip.launch.py use_fake_hardware:=false"

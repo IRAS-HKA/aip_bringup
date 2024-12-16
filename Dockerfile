@@ -132,5 +132,12 @@ RUN echo "source /home/$USER/ros_ws/install/setup.bash" >> /home/$USER/.bashrc
 ##############################################################################
 ##                                 autostart                                ##
 ##############################################################################
+RUN sudo sed --in-place --expression \
+    '$isource "/home/$USER/ros_ws/install/setup.bash"' \
+    /ros_entrypoint.sh
+
+RUN sudo sed --in-place --expression \
+    '$isource "/home/$USER/dependencies_ws/install/setup.bash"' \
+    /ros_entrypoint.sh
 
 CMD ["bash"]
