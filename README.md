@@ -17,12 +17,13 @@ For a detailed information to the Bring Up of the AIP application, please check 
     - **False** = Actions will be performed on the physical KR10. 
         ``` bash
         # in aip_bringup docker 
-        ros2 launch aip_cell_description aip.launch.py use_fake_hardware:=false robot_ip:=10.166.32.145
+        ros2 launch aip_bringup aip.launch.py use_fake_hardware:=false robot_ip:=10.166.32.145
         ``` 
 
-3. Start the Bosch Gripper node to enable gripper movements 
+3. Bosch Gripper node to enable gripper movements 
     ``` bash
-    # in aip_bringup docker 
+    # is started automatically with previous aip.launch.py
+    # (optional)
     ros2 run aip_bosch_gripper aip_bosch_gripper_node 
     ``` 
 
