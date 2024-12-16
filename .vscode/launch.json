@@ -52,7 +52,7 @@
             "id": "package",
             "type": "promptString",
             "description": "Package name",
-            "default": "aip_bosch_gripper"
+            "default": "aip_bringup"
         },
         {
             "id": "program",
@@ -64,7 +64,7 @@
             "id": "ros_launch",
             "type": "promptString",
             "description": "ROS launch name",
-            "default": "cell.launch.py"
+            "default": "aip.launch.py"
         }
     ]
 }

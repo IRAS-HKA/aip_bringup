@@ -18,6 +18,7 @@ def load_yaml(package_name, file_path):
         with open(absolute_file_path, "r") as file:
             return yaml.safe_load(file)
     except EnvironmentError:  # parent of IOError, OSError *and* WindowsError where available
+        print("Error loading file: " + absolute_file_path)
         return None
 
 
@@ -124,6 +125,7 @@ def generate_launch_description():
             "robot_ip": robot_ip,
             "eki_io_port": eki_io_port,
             "n_io": n_io,
+            "use_fake_hardware": use_fake_hardware,
         }.items(),
     )
 

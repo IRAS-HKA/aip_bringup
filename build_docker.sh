@@ -2,7 +2,7 @@
 uid=$(eval "id -u")
 gid=$(eval "id -g")
 
-# --no-cache 
+    # --no-cache \
 docker build \
     --build-arg UID="$uid" \
     --build-arg GID="$gid" \
